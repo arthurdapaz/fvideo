@@ -1,0 +1,8 @@
+# cleaning some trash
+
+*.deb
+_/
+obj/
+theos/
+.theos
+
