@@ -4,6 +4,8 @@ CFLAGS = -fobjc-arc
 
 include $(THEOS)/makefiles/common.mk
 
+include $(THEOS)/makefiles/bundle.mk
+
 TWEAK_NAME = FVideo
 FVideo_FILES = Tweak.xm $(wildcard incs/TWRDownloadManager/*.m) $(wildcard incs/JGProgressHUD/*.m)
 FVideo_FRAMEWORKS = UIKit AudioToolbox Foundation CFNetwork CoreLocation CoreVideo CoreGraphics QuartzCore CoreImage MobileCoreServices CoreMedia Photos
