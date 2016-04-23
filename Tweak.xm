@@ -81,12 +81,12 @@
     while (rootController.presentedViewController) {
         rootController = rootController.presentedViewController;
     }
+    
     return rootController;
 }
 
 - (UIView *)topView {
-    UIView *rootView = [UIApplication sharedApplication].keyWindow.rootViewController.view;
-    return rootView;
+    return [UIApplication sharedApplication].keyWindow.rootViewController.view;
 }
 
 - (void)handleWrapper:(FBVideoPlayerComponentStatefulView *)wrapper {
