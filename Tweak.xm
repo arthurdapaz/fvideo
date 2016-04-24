@@ -28,6 +28,7 @@
     [self cleanup];
 
     self.HUD = [JGProgressHUD progressHUDWithStyle:JGProgressHUDStyleDark];
+    self.HUD.interactionType = 2;
     self.HUD.textLabel.textAlignment = NSTextAlignmentCenter;
     self.HUD.textLabel.text = @"Downloading";
     [self.HUD showInView:[self topView]];

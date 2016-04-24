@@ -1,7 +1,7 @@
 Package: com.arthurdapaz.fvideo
 Name: FVideo
 Depends: mobilesubstrate
-Version: 0.3.0
+Version: 0.4.0
 Architecture: iphoneos-arm
 Description: Facebook video downloader inspired by Prenesi
 Maintainer: Arthur da Paz <arthurdapaz@me.com>
