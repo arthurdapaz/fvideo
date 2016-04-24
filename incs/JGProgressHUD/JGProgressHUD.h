@@ -15,8 +15,6 @@
 #import "JGProgressHUDIndicatorView.h"
 #import "JGProgressHUDErrorIndicatorView.h"
 #import "JGProgressHUDSuccessIndicatorView.h"
-#import "JGProgressHUDRingIndicatorView.h"
-#import "JGProgressHUDPieIndicatorView.h"
 #import "JGProgressHUDIndeterminateIndicatorView.h"
 
 @class JGProgressHUD;

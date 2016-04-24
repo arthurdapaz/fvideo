@@ -6,7 +6,7 @@ include $(THEOS)/makefiles/common.mk
 
 TWEAK_NAME = FVideo
 FVideo_FILES = Tweak.xm $(wildcard incs/TWRDownloadManager/*.m) $(wildcard incs/JGProgressHUD/*.m)
-FVideo_FRAMEWORKS = UIKit AudioToolbox Foundation CFNetwork CoreLocation CoreVideo CoreGraphics QuartzCore CoreImage MobileCoreServices CoreMedia Photos
+FVideo_FRAMEWORKS = UIKit AudioToolbox CoreGraphics QuartzCore Photos
 FVideo_LIBRARIES = substrate
 FVideo_LDFLAGS += -Wl,-segalign,4000
 
