@@ -3,13 +3,19 @@
 #import <substrate.h>
 #import <UIKit/UIKit.h>
 
-#import "incs/TWRDownloadManager/TWRDownloadManager.h"
-#import "incs/JGProgressHUD/JGProgressHUD.h"
+#import "incs/MBFileDownloader/MBFileDownloader.h"
+
+#define bgRun(void) dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(void)
+#define bgDraw(void) dispatch_async(dispatch_get_main_queue(), ^(void)
+
 
 @class FBVideoPlayerComponentStatefulView;
-@interface FVideo : NSObject
 
-@property (nonatomic, retain) JGProgressHUD *HUD;
+@interface FVideo : NSObject {
+    UIAlertView *alert;
+}
+@property (nonatomic, retain) NSURL *sdURL;
+@property (nonatomic, retain) NSURL *hdURL;
 
 + (id)sharedInstance;
 - (void)cleanup;
@@ -17,8 +23,7 @@
 - (void)handleWrapper:(FBVideoPlayerComponentStatefulView *)wrapper;
 - (void)startDownload:(NSURL *)url;
 - (NSString *)videoPath;
-- (UIViewController *)topController;
-- (UIView *)topView;
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex;
 @end
 
 @interface FBVideoPlaybackItem
@@ -35,5 +40,8 @@
 @end
 
 @interface FBVideoPlayerComponentStatefulView : UIView
-- (FBVideoViewManager *)viewManager;
+{
+    FBVideoViewManager *_viewManager;
+}
+@property(retain, nonatomic) FBVideoViewManager *viewManager;
 @end
