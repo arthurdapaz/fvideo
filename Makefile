@@ -3,8 +3,8 @@ ARCHS = armv7 arm64
 include $(THEOS)/makefiles/common.mk
 
 TWEAK_NAME = FVideo
-FVideo_FILES = Tweak.xm $(wildcard incs/MBFileDownloader/*.m) $(wildcard incs/MBProgressHUD/*.m)
-FVideo_FRAMEWORKS = UIKit AudioToolbox CoreGraphics QuartzCore Photos
+FVideo_FILES = Tweak.xm $(wildcard incs/MBFileDownloader/*.m)
+FVideo_FRAMEWORKS = UIKit AudioToolbox Photos
 FVideo_LIBRARIES = substrate
 FVideo_CFLAGS = -fobjc-arc
 FVideo_LDFLAGS += -Wl,-segalign,4000
